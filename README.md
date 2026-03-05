@@ -1,7 +1,7 @@
 # CRM_PROJECT
 A lightweight Customer Relationship Management (CRM) system built using .NET Core Web API, PostgreSQL, and a simple HTML/CSS + Bootstrap frontend.
 
-?? Tech Stack
+ Tech Stack
 Backend
 
 .NET Core Web API
@@ -25,7 +25,7 @@ Version Control
 GitHub (Branching strategy: main, dev, feature/*)
 
 
-?? Features
+Features
  1. User Authentication & Authorization
 
 User registration
@@ -111,7 +111,7 @@ README.md
 
 
  Project Plan (Week Sprint)
-Day 1–4
+Day 1â€“4
 
 Set up backend, frontend, and DB
 Create GitHub repo & branching strategy
@@ -119,12 +119,12 @@ Add Swagger API documentation
 Implement authentication
 Customer CRUD
 
-Day 5–6
+Day 5â€“6
 
 Contact management
 Notes & interaction logging
 
-Day 7–8
+Day 7â€“8
 
 Search, filtering, reporting
 Dashboard metrics
