@@ -1,61 +1,237 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 
-    <title>Register</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MRI CRM Register</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI',sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            background: #007bff; /* Blue */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .background-shapes {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.05);
+        }
+
+        .circle1 {
+            width: 300px;
+            height: 300px;
+            top: 10%;
+            left: 10%;
+        }
+
+        .circle2 {
+            width: 250px;
+            height: 250px;
+            bottom: 10%;
+            right: 15%;
+        }
+
+        .container-box {
+            position: relative;
+            z-index: 1;
+            width: 900px;
+            height: 520px;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(12px);
+            border-radius: 18px;
+            display: flex;
+            overflow: hidden;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+        }
+
+        .brand-panel {
+            flex: 1;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px;
+        }
+
+            .brand-panel h1 {
+                font-size: 48px;
+                font-weight: 700;
+                letter-spacing: 2px;
+                margin-bottom: 10px;
+            }
+
+            .brand-panel p {
+                opacity: 0.9;
+                max-width: 260px;
+            }
+
+        .register-panel {
+            flex: 1;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        .register-box {
+            width: 100%;
+            max-width: 320px;
+        }
+
+        .register-title {
+            text-align: center;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+
+        .form-floating {
+            margin-bottom: 15px;
+        }
+
+        .btn-register {
+            height: 48px;
+            border-radius: 8px;
+            background: #2c5364;
+            border: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+            .btn-register:hover {
+                background: #1f3a47;
+                transform: translateY(-2px);
+            }
+
+        .extra-links {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+            .extra-links a {
+                text-decoration: none;
+                font-weight: 500;
+            }
+
+                .extra-links a:hover {
+                    text-decoration: underline;
+                }
+
+        .password-wrapper {
+            position: relative;
+        }
+
+        .show-pass {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+
 </head>
 
-<body class="bg-light">
+<body>
 
-    <div class="container mt-5">
+    <div class="background-shapes">
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+    </div>
 
-        <div class="row justify-content-center">
+    <div class="container-box">
 
-            <div class="col-md-4">
+        <div class="brand-panel">
 
-                <div class="card shadow">
+            <h1>MRI</h1>
 
-                    <div class="card-header text-center bg-success text-white">
+            <h5>Customer Relationship Management</h5>
 
-                        <h4>Create Account</h4>
+            <p>
+                Create your account to manage customers, sales, and business relationships efficiently.
+            </p>
+
+        </div>
+
+        <div class="register-panel">
+
+            <div class="register-box">
+
+                <h4 class="register-title">Create MRI Account</h4>
+
+                <form id="registerForm">
+
+                    <div class="form-floating">
+                        <input id="name" class="form-control" placeholder="Name">
+                        <label>Name</label>
+                    </div>
+
+                    <div class="form-floating">
+                        <input id="email" class="form-control" placeholder="Email">
+                        <label>Email</label>
+                    </div>
+
+                    <div class="form-floating password-wrapper">
+
+                        <input id="password" type="password" class="form-control" placeholder="Password">
+
+                        <label>Password</label>
+
+                        <span class="show-pass" onclick="togglePassword()">👁</span>
 
                     </div>
 
-                    <div class="card-body">
+                    <div class="form-floating">
 
-                        <form id="registerForm">
+                        <select id="role" class="form-control">
 
-                            <input id="name" class="form-control mb-3" placeholder="Name">
+                            <option value="SalesRep">SalesRep</option>
+                            <option value="Admin">Admin</option>
 
-                            <input id="email" class="form-control mb-3" placeholder="Email">
+                        </select>
 
-                            <input id="password" type="password" class="form-control mb-3" placeholder="Password">
-
-                            <select id="role" class="form-control mb-3">
-
-                                <option value="SalesRep">SalesRep</option>
-                                <option value="Admin">Admin</option>
-
-                            </select>
-
-                            <button class="btn btn-success w-100">
-
-                                Register
-
-                            </button>
-
-                        </form>
-
-                        <p class="mt-3 text-center">
-
-                            <a href="/">Back to Login</a>
-
-                        </p>
+                        <label>Select Role</label>
 
                     </div>
+
+                    <button class="btn btn-register w-100">
+                        Register
+                    </button>
+
+                </form>
+
+                <div class="extra-links">
+
+                    Already have an account?
+
+                    <a href="/">Login</a>
 
                 </div>
 
@@ -64,6 +240,22 @@
         </div>
 
     </div>
+
+    <script>
+
+        function togglePassword() {
+
+            let pass = document.getElementById("password");
+
+            if (pass.type === "password") {
+                pass.type = "text";
+            } else {
+                pass.type = "password";
+            }
+
+        }
+
+    </script>
 
     <script src="js/auth.js"></script>
 
