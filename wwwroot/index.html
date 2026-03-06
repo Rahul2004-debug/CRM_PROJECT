@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
 
     <meta charset="UTF-8">
@@ -19,17 +20,17 @@
 
         body {
             height: 100vh;
-            background: #007bff; /* Blue */
+            background: #007bff;
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
         }
+
         .background-shapes {
             position: absolute;
             width: 100%;
             height: 100%;
-            z-index: 0;
         }
 
         .circle {
@@ -76,18 +77,6 @@
             padding: 40px;
         }
 
-            .brand-panel h1 {
-                font-size: 48px;
-                font-weight: 700;
-                letter-spacing: 2px;
-                margin-bottom: 10px;
-            }
-
-            .brand-panel p {
-                opacity: 0.9;
-                max-width: 260px;
-            }
-
         .login-panel {
             flex: 1;
             background: white;
@@ -102,14 +91,19 @@
             max-width: 320px;
         }
 
-        .login-title {
-            text-align: center;
-            font-weight: 600;
-            margin-bottom: 30px;
+        .error-msg {
+            font-size: 13px;
+            color: red;
+            margin-top: 3px;
         }
 
-        .form-floating {
-            margin-bottom: 18px;
+        .success-msg {
+            background: #d4edda;
+            color: #155724;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            display: none;
         }
 
         .btn-login {
@@ -117,42 +111,8 @@
             border-radius: 8px;
             background: #2c5364;
             border: none;
+            color: white;
             font-weight: 600;
-            transition: 0.3s;
-        }
-
-            .btn-login:hover {
-                background: #1f3a47;
-                transform: translateY(-2px);
-            }
-
-        .extra-links {
-            text-align: center;
-            margin-top: 18px;
-            font-size: 14px;
-        }
-
-            .extra-links a {
-                text-decoration: none;
-                font-weight: 500;
-            }
-
-                .extra-links a:hover {
-                    text-decoration: underline;
-                }
-
-        .show-pass {
-            position: absolute;
-            right: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            cursor: pointer;
-            font-size: 14px;
-            color: #555;
-        }
-
-        .password-wrapper {
-            position: relative;
         }
     </style>
 
@@ -170,12 +130,8 @@
         <div class="brand-panel">
 
             <h1>MRI</h1>
-
             <h5>Customer Relationship Management</h5>
-
-            <p>
-                Manage customers, sales, and support with a powerful and secure CRM platform built for modern businesses.
-            </p>
+            <p>Secure CRM platform for modern businesses</p>
 
         </div>
 
@@ -183,63 +139,40 @@
 
             <div class="login-box">
 
-                <h4 class="login-title">Sign in to MRI CRM</h4>
+                <h4 class="text-center mb-3">Sign In</h4>
+
+                <div id="successBox" class="success-msg"></div>
 
                 <form id="loginForm">
 
                     <div class="form-floating">
-                        <input type="email" class="form-control" id="email" placeholder="Email">
-                        <label>Email address</label>
+                        <input id="email" type="email" class="form-control" placeholder="Email">
+                        <label>Email</label>
+                        <div id="emailError" class="error-msg"></div>
                     </div>
 
-                    <div class="form-floating password-wrapper">
-
-                        <input type="password" class="form-control" id="password" placeholder="Password">
-
+                    <div class="form-floating">
+                        <input id="password" type="password" class="form-control" placeholder="Password">
                         <label>Password</label>
-
-                        <span class="show-pass" onclick="togglePassword()">👁</span>
-
+                        <div id="passwordError" class="error-msg"></div>
                     </div>
 
-                    <button class="btn btn-login w-100">
+                    <div id="formError" class="error-msg text-center"></div>
+
+                    <button class="btn btn-login w-100 mt-3">
                         Login
                     </button>
 
                 </form>
 
-                <div class="extra-links">
-
-                    <a href="#">Forgot password?</a>
-
-                    <br>
-
+                <div class="text-center mt-3">
                     Don't have an account?
                     <a href="register.html">Create account</a>
-
                 </div>
 
             </div>
-
         </div>
-
     </div>
-
-    <script>
-
-        function togglePassword() {
-
-            let pass = document.getElementById("password");
-
-            if (pass.type === "password") {
-                pass.type = "text";
-            } else {
-                pass.type = "password";
-            }
-
-        }
-
-    </script>
 
     <script src="js/auth.js"></script>
 

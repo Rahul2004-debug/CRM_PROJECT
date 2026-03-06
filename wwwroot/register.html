@@ -1,7 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MRI CRM Register</title>
@@ -19,7 +18,7 @@
 
         body {
             height: 100vh;
-            background: #007bff; /* Blue */
+            background: #007bff;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -80,13 +79,7 @@
             .brand-panel h1 {
                 font-size: 48px;
                 font-weight: 700;
-                letter-spacing: 2px;
                 margin-bottom: 10px;
-            }
-
-            .brand-panel p {
-                opacity: 0.9;
-                max-width: 260px;
             }
 
         .register-panel {
@@ -105,12 +98,26 @@
 
         .register-title {
             text-align: center;
-            font-weight: 600;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
         .form-floating {
-            margin-bottom: 15px;
+            margin-bottom: 12px;
+        }
+
+        .error-msg {
+            font-size: 13px;
+            color: red;
+            margin-top: 3px;
+        }
+
+        .success-msg {
+            background: #d4edda;
+            color: #155724;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            display: none;
         }
 
         .btn-register {
@@ -118,45 +125,10 @@
             border-radius: 8px;
             background: #2c5364;
             border: none;
+            color: white;
             font-weight: 600;
-            transition: 0.3s;
-        }
-
-            .btn-register:hover {
-                background: #1f3a47;
-                transform: translateY(-2px);
-            }
-
-        .extra-links {
-            text-align: center;
-            margin-top: 15px;
-            font-size: 14px;
-        }
-
-            .extra-links a {
-                text-decoration: none;
-                font-weight: 500;
-            }
-
-                .extra-links a:hover {
-                    text-decoration: underline;
-                }
-
-        .password-wrapper {
-            position: relative;
-        }
-
-        .show-pass {
-            position: absolute;
-            right: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            cursor: pointer;
-            font-size: 14px;
-            color: #555;
         }
     </style>
-
 </head>
 
 <body>
@@ -169,90 +141,69 @@
     <div class="container-box">
 
         <div class="brand-panel">
-
             <h1>MRI</h1>
-
             <h5>Customer Relationship Management</h5>
-
-            <p>
-                Create your account to manage customers, sales, and business relationships efficiently.
-            </p>
-
+            <p>Create your account to manage customers and sales.</p>
         </div>
 
         <div class="register-panel">
 
             <div class="register-box">
 
-                <h4 class="register-title">Create MRI Account</h4>
+                <h4 class="register-title">Create Account</h4>
+
+                <div id="successBox" class="success-msg"></div>
 
                 <form id="registerForm">
 
                     <div class="form-floating">
                         <input id="name" class="form-control" placeholder="Name">
                         <label>Name</label>
+                        <div id="nameError" class="error-msg"></div>
                     </div>
 
                     <div class="form-floating">
                         <input id="email" class="form-control" placeholder="Email">
                         <label>Email</label>
+                        <div id="emailError" class="error-msg"></div>
                     </div>
 
                     <div class="form-floating password-wrapper">
-
                         <input id="password" type="password" class="form-control" placeholder="Password">
-
                         <label>Password</label>
-
                         <span class="show-pass" onclick="togglePassword()">👁</span>
-
+                        <div id="passwordError" class="error-msg"></div>
                     </div>
 
                     <div class="form-floating">
-
                         <select id="role" class="form-control">
-
                             <option value="SalesRep">SalesRep</option>
                             <option value="Admin">Admin</option>
-
                         </select>
-
                         <label>Select Role</label>
-
                     </div>
 
-                    <button class="btn btn-register w-100">
-                        Register
-                    </button>
+                    <div id="formError" class="error-msg text-center"></div>
+
+                    <button class="btn btn-register w-100">Register</button>
 
                 </form>
 
-                <div class="extra-links">
-
+                <div class="text-center mt-3">
                     Already have an account?
-
                     <a href="/">Login</a>
-
                 </div>
 
             </div>
-
         </div>
-
     </div>
 
     <script>
 
         function togglePassword() {
-
             let pass = document.getElementById("password");
 
-            if (pass.type === "password") {
-                pass.type = "text";
-            } else {
-                pass.type = "password";
-            }
-
+            pass.type = pass.type === "password" ? "text" : "password";
         }
 
     </script>

@@ -127,7 +127,6 @@ C:\Users\Harshith.Gowda\Desktop\CRM_Project\CRM\CRM.API\obj\Debug\net10.0\static
 C:\Users\Harshith.Gowda\Desktop\CRM_Project\CRM\CRM.API\obj\Debug\net10.0\staticwebassets.development.json
 C:\Users\Harshith.Gowda\Desktop\CRM_Project\CRM\CRM.API\obj\Debug\net10.0\staticwebassets.build.endpoints.json
 C:\Users\Harshith.Gowda\Desktop\CRM_Project\CRM\CRM.API\obj\Debug\net10.0\swae.build.ex.cache
-C:\Users\Harshith.Gowda\Desktop\CRM_Project\CRM\CRM.API\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
 C:\Users\Harshith.Gowda\Desktop\CRM_Project\CRM\CRM.API\obj\Debug\net10.0\CRM.API.csproj.Up2Date
 C:\Users\Harshith.Gowda\Desktop\CRM_Project\CRM\CRM.API\obj\Debug\net10.0\CRM.API.dll
 C:\Users\Harshith.Gowda\Desktop\CRM_Project\CRM\CRM.API\obj\Debug\net10.0\refint\CRM.API.dll
@@ -136,7 +135,10 @@ C:\Users\Harshith.Gowda\Desktop\CRM_Project\CRM\CRM.API\obj\Debug\net10.0\CRM.AP
 C:\Users\Harshith.Gowda\Desktop\CRM_Project\CRM\CRM.API\obj\Debug\net10.0\ref\CRM.API.dll
 C:\Users\Harshith.Gowda\Desktop\CRM_Project\CRM\CRM.API\bin\Debug\net10.0\CRM.API.staticwebassets.runtime.json
 C:\Users\Harshith.Gowda\Desktop\CRM_Project\CRM\CRM.API\obj\Debug\net10.0\compressed\sklsaaw25e-{0}-dyjx89twm7-dyjx89twm7.gz
-C:\Users\Harshith.Gowda\Desktop\CRM_Project\CRM\CRM.API\obj\Debug\net10.0\compressed\8kcndov5br-{0}-mgtgpn5du8-mgtgpn5du8.gz
 C:\Users\Harshith.Gowda\Desktop\CRM_Project\CRM\CRM.API\obj\Debug\net10.0\compressed\gh68k5o7wo-{0}-jjzl9mxzlq-jjzl9mxzlq.gz
-C:\Users\Harshith.Gowda\Desktop\CRM_Project\CRM\CRM.API\obj\Debug\net10.0\compressed\kamzjqtlpw-{0}-kigdy2x9ew-kigdy2x9ew.gz
-C:\Users\Harshith.Gowda\Desktop\CRM_Project\CRM\CRM.API\obj\Debug\net10.0\compressed\gne3bxnici-{0}-3yayp59wd8-3yayp59wd8.gz
+C:\Users\Harshith.Gowda\Desktop\CRM_Project\CRM\CRM.API\obj\Debug\net10.0\compressed\ztcn8wbpun-{0}-oj4uul14d9-oj4uul14d9.gz
+C:\Users\Harshith.Gowda\Desktop\CRM_Project\CRM\CRM.API\obj\Debug\net10.0\compressed\7gfyq66l7q-{0}-1tjqpare5h-1tjqpare5h.gz
+C:\Users\Harshith.Gowda\Desktop\CRM_Project\CRM\CRM.API\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
+C:\Users\Harshith.Gowda\Desktop\CRM_Project\CRM\CRM.API\obj\Debug\net10.0\compressed\gne3bxnici-{0}-rrrelaxlyi-rrrelaxlyi.gz
+C:\Users\Harshith.Gowda\Desktop\CRM_Project\CRM\CRM.API\obj\Debug\net10.0\compressed\kamzjqtlpw-{0}-918mtvoh4n-918mtvoh4n.gz
+C:\Users\Harshith.Gowda\Desktop\CRM_Project\CRM\CRM.API\obj\Debug\net10.0\compressed\8kcndov5br-{0}-5io4q9xo9w-5io4q9xo9w.gz

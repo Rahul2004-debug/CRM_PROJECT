@@ -1,81 +1,157 @@
 ﻿const API = "/api/auth";
 
+/* ---------- REGISTER ---------- */
+
 document.getElementById("registerForm")?.addEventListener("submit", async function (e) {
 
     e.preventDefault();
+    clearErrors();
 
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
     const password = document.getElementById("password").value;
     const role = document.getElementById("role").value;
 
-    const res = await fetch(API + "/register", {
+    let valid = true;
 
-        method: "POST",
+    if (name.length < 3) {
+        showError("nameError", "Name must be at least 3 characters");
+        valid = false;
+    }
 
-        headers: {
+    if (!validateEmail(email)) {
+        showError("emailError", "Please enter a valid email");
+        valid = false;
+    }
 
-            "Content-Type": "application/json"
+    if (password.length < 8) {
+        showError("passwordError", "Password must contain at least 8 characters");
+        valid = false;
+    }
 
-        },
+    if (!valid) return;
 
-        body: JSON.stringify({
+    try {
 
-            name,
-            email,
-            password,
-            role
+        const res = await fetch(API + "/register", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ name, email, password, role })
+        });
 
-        })
+        const data = await res.text();
 
-    });
+        if (!res.ok) {
+            showError("formError", data);
+            return;
+        }
 
-    const data = await res.text();
+        showSuccess("Account created successfully!");
 
-    alert(data);
+        setTimeout(() => {
+            window.location.href = "/";
+        }, 1500);
 
-    window.location.href = "/";
+    } catch (err) {
+
+        showError("formError", "Server error. Please try again.");
+
+    }
 
 });
+
+
+/* ---------- LOGIN ---------- */
 
 document.getElementById("loginForm")?.addEventListener("submit", async function (e) {
 
     e.preventDefault();
+    clearErrors();
 
-    const email = document.getElementById("email").value;
+    const email = document.getElementById("email").value.trim();
     const password = document.getElementById("password").value;
 
-    const res = await fetch(API + "/login", {
+    let valid = true;
 
-        method: "POST",
+    if (!validateEmail(email)) {
+        showError("emailError", "Enter a valid email");
+        valid = false;
+    }
 
-        headers: {
+    if (password.length < 8) {
+        showError("passwordError", "Password must contain at least 8 characters");
+        valid = false;
+    }
 
-            "Content-Type": "application/json"
+    if (!valid) return;
 
-        },
+    try {
 
-        body: JSON.stringify({
+        const res = await fetch(API + "/login", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ email, password })
+        });
 
-            email,
-            password
+        const token = await res.text();
 
-        })
+        if (!res.ok) {
+            showError("formError", token);
+            return;
+        }
 
-    });
+        localStorage.setItem("token", token);
 
-    const token = await res.text();
+        showSuccess("Login successful!");
 
-    localStorage.setItem("token", token);
+        setTimeout(() => {
+            window.location.href = "/dashboard.html";
+        }, 1000);
 
-    window.location.href = "/dashboard.html";
+    } catch {
+
+        showError("formError", "Server error. Try again.");
+
+    }
 
 });
 
-function logout() {
 
-    localStorage.removeItem("token");
+/* ---------- HELPERS ---------- */
 
-    window.location.href = "/";
+function validateEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+function showError(id, message) {
+    const el = document.getElementById(id);
+    if (el) el.innerText = message;
+}
+
+function clearErrors() {
+
+    const errors = document.querySelectorAll(".error-msg");
+
+    errors.forEach(e => {
+        e.innerText = "";
+    });
+
+    const formError = document.getElementById("formError");
+    if (formError) formError.innerText = "";
+
+}
+
+function showSuccess(message) {
+
+    const box = document.getElementById("successBox");
+
+    if (box) {
+        box.style.display = "block";
+        box.innerText = message;
+    }
 
 }

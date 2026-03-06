@@ -23,7 +23,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 // Services
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<JwtHelper>();
-
+builder.Services.AddScoped<ICustomerService, CustomerService>();
 // CORS
 builder.Services.AddCors(options =>
 {
