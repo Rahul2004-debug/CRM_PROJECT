@@ -1,11 +1,7 @@
-CRM
 
-The CRM (Customer Relationship Management) project is designed to help businesses manage customer data efficiently.
-It allows teams to store and track customer information, leads, and sales activities.
-The system provides a centralized platform where all customer interactions can be monitored.
-It helps support teams resolve customer issues quickly using a unified dashboard.
-The CRM also generates useful reports to analyze sales trends and customer behaviour.
-It improves collaboration by keeping customer data accessible to all authorized team members.
-Admins can manage user roles and permissions within the system.
-The main goal of the CRM project is to improve customer satisfaction and streamline business processes.
-Overall, it helps the company build stronger customer relationships and improve efficiency.
+CRM.
+A CRM (Customer Relationship Management) project is a system created to help businesses manage their customers in an organized and efficient way. 
+It stores important details such as customer names, phone numbers, emails, and any past interactions the company has had with them. 
+The purpose of a CRM is to help teams track sales, follow up with customers on time, and avoid missing important leads.
+It also allows the business to understand customer needs better, improve communication, and provide a more personalized experience.
+Overall, a CRM project is all about building a tool that keeps all customer-related information in one place, making work easier and helping the business grow.
