@@ -135,8 +135,8 @@ C:\Users\Harshith.Gowda\Desktop\CRM_Project\CRM\CRM.API\obj\Debug\net10.0\CRM.AP
 C:\Users\Harshith.Gowda\Desktop\CRM_Project\CRM\CRM.API\obj\Debug\net10.0\CRM.API.genruntimeconfig.cache
 C:\Users\Harshith.Gowda\Desktop\CRM_Project\CRM\CRM.API\obj\Debug\net10.0\ref\CRM.API.dll
 C:\Users\Harshith.Gowda\Desktop\CRM_Project\CRM\CRM.API\bin\Debug\net10.0\CRM.API.staticwebassets.runtime.json
-C:\Users\Harshith.Gowda\Desktop\CRM_Project\CRM\CRM.API\obj\Debug\net10.0\compressed\gne3bxnici-{0}-x3o5v3omjc-x3o5v3omjc.gz
 C:\Users\Harshith.Gowda\Desktop\CRM_Project\CRM\CRM.API\obj\Debug\net10.0\compressed\sklsaaw25e-{0}-dyjx89twm7-dyjx89twm7.gz
 C:\Users\Harshith.Gowda\Desktop\CRM_Project\CRM\CRM.API\obj\Debug\net10.0\compressed\8kcndov5br-{0}-mgtgpn5du8-mgtgpn5du8.gz
 C:\Users\Harshith.Gowda\Desktop\CRM_Project\CRM\CRM.API\obj\Debug\net10.0\compressed\kamzjqtlpw-{0}-vj0ii8zvmn-vj0ii8zvmn.gz
-C:\Users\Harshith.Gowda\Desktop\CRM_Project\CRM\CRM.API\obj\Debug\net10.0\compressed\gh68k5o7wo-{0}-c52h52jpat-c52h52jpat.gz
+C:\Users\Harshith.Gowda\Desktop\CRM_Project\CRM\CRM.API\obj\Debug\net10.0\compressed\gh68k5o7wo-{0}-jjzl9mxzlq-jjzl9mxzlq.gz
+C:\Users\Harshith.Gowda\Desktop\CRM_Project\CRM\CRM.API\obj\Debug\net10.0\compressed\gne3bxnici-{0}-ignw13n6jr-ignw13n6jr.gz
