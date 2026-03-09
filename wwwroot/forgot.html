@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Forgot Password</title>
+</head>
+
+<body>
+
+    <h2>Forgot Password</h2>
+
+    <input type="email" id="email" placeholder="Enter your email" />
+    <br><br>
+
+    <button onclick="sendOtp()">Send OTP</button>
+
+    <p id="msg"></p>
+
+    <script>
+        function sendOtp() {
+
+            var email = document.getElementById("email").value;
+
+            fetch("https://localhost:7246/api/auth/forgot-password", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(email)
+            })
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("msg").innerText = data;
+                })
+                .catch(error => {
+                    console.error(error);
+                    document.getElementById("msg").innerText = "Error sending OTP";
+                });
+
+        }
+    </script>
+
+</body>
+</html>

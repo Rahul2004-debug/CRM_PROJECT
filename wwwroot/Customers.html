@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer CRM</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 40px;
+        }
+
+        input {
+            padding: 8px;
+            margin: 5px;
+            width: 200px;
+        }
+
+        button {
+            padding: 8px 12px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        table {
+            margin-top: 20px;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background: #eee;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Customer Management</h2>
+
+    <h3>Add / Update Customer</h3>
+
+    <input type="hidden" id="customerId">
+
+    <input id="name" placeholder="Name">
+    <input id="email" placeholder="Email">
+    <input id="phone" placeholder="Phone">
+    <input id="address" placeholder="Address">
+    <input id="company" placeholder="Company">
+
+    <br>
+
+    <button onclick="addCustomer()">Add Customer</button>
+    <button onclick="updateCustomer()">Update Customer</button>
+
+    <hr>
+
+    <h3>Customer List</h3>
+
+    <button onclick="loadCustomers()">Refresh</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Company</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <tbody id="customersTable"></tbody>
+
+    </table>
+
+    <script src="js/customers.js"></script>
+
+</body>
+</html>
